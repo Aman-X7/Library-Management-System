@@ -13,29 +13,29 @@ class book
 	public:
 	void createbook()
 	{
-		cout<<"\nNEW BOOK ENTRY...\n";
-		cout<<"\nENTER BOOK NO.";
+		cout<<"NEW BOOK ENTRY...."<<endl;
+		cout<<"ENTER BOOK NO."<<endl;
 		cin>>bno;
-		cout<<"\nENTER BOOK NAME";
-		gets(bname);//enables enter with space
-		cout<<"\nENTER AUTHOR NAME";
+		cout<<"ENTER BOOK NAME"<<endl;
+		gets(bname);//you can enter values with space
+		cout<<"ENTER AUTHOR NAME"<<endl;
 		gets(aname);
-		cout<<"\n\n\nBook Created..";
+		cout<<"Book Created.."<<endl;
 	}
 	void showbook()
 	{
-		cout<<"\nBook Number: "<<bno;
-		cout<<"\nBook Name: ";
+		cout<<"Book Number: "<<bno<<endl;
+		cout<<"Book Name: "<<endl;
 		puts(bname);
-		cout<<"\nBook Author Name: ";
+		cout<<"Book Author Name: "<<endl;
 		puts(aname);
 	}
 	void modifybook()
 	{
 		cout<<"\nBook Number: "<<bno;
-		cout<<"\nModify Book Name :";
+		cout<<"Modify Book Name :"<<endl;
 		gets(bname);
-		cout<<"\nModify Author's Name :";
+		cout<<"Modify Author's Name :"<<endl;
 		gets(aname);
 		
 	}
@@ -53,18 +53,19 @@ class book
 
 class student
 {
+//defining student template so we can use it for many students
 	char admno[6];//admission no.
-	char name[20];
-	char stbno[6];// student book no 
+	char name[20]; //name of the student 
+	char stbno[6];// book number of a student
 	int token;//total book of student
 	public:
 	void createstudent()
 	{
 		clrscr();
-		cout<<"\nNEW STUDENT ENTRY...\n";
-		cout<<"\nEnter The Admission No. ";
+		cout<<"NEW STUDENT ENTRY..."<<endl;
+		cout<<"Enter The Admission No. "<<endl;
 		cin>>admno;
-		cout<<"Enter The Student Name ";
+		cout<<"Enter The Student Name "<<endl;
 		gets(name);
 		token=0;
 		stbno[0]='\0';
@@ -73,7 +74,7 @@ class student
 	void showstudent()
 	{
 		cout<<"\nAdmission Number : "<<admno;
-		cout<<"\nStudent Name : ";
+		cout<<"Student Name : "<<endl;
 		puts(name);
 		cout<<"\nNo of Book Issued : "<<token;
 		if(token==1)
